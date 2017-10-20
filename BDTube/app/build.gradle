@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "bdtube.vumobile.com.bdtube"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 17
+        versionName "2.15"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // compile 'com.google.android.gms:play-services:+'
+    // compile 'com.google.android.gms:play-services-gcm:7.5.0'
+    //compile 'com.google.android.gms:play-services-location:7.5.0'
+    // compile files('libs/gcm.jar')
+    /// compile files('libs/google-play-services_lib.jar')
+    compile project(':pullToRefreshLibrary')
+    compile files('libs/ksoap2-android-assembly-2.5.8-jar-with-dependencies.jar')
+    compile files('libs/adplaybind.jar')
+    compile files('libs/FlurryAnalytics-6.2.0.jar')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'com.squareup.okhttp:okhttp:2.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    compile 'com.longtailvideo.jwplayer:jwplayer-core:+'
+    compile 'com.longtailvideo.jwplayer:jwplayer-common:+'
+    compile 'com.longtailvideo.jwplayer:jwplayer-ima:+'
+//    compile 'com.github.AdPLayAD:adplay:1.0.9'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.android.support:cardview-v7:23.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support:support-v4:23.0.0'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    compile 'com.daimajia.androidanimations:library:1.0.3@aar'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+}
